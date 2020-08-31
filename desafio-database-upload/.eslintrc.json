@@ -1,6 +1,6 @@
 {
   "env": {
-    "es6": true,
+    "es2020": true,
     "node": true,
     "jest": true
   },
@@ -27,10 +27,16 @@
     "no-underscore-dangle": "off",
     "prettier/prettier": "error",
     "class-methods-use-this": "off",
-    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "variable",
+        "format": ["camelCase", "off"]
+      }
+    ],
     "@typescript-eslint/no-unused-vars": ["error", {
       "argsIgnorePattern": "_"
-    }],
+      }],
     "import/extensions": [
       "error",
       "ignorePackages",
